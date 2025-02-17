@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background:  linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.question {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.option {
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  color: #495057;
+}
+
+.option:hover {
+  background: #e9ecef;
+  border-color: #dee2e6;
+  transform: translateX(5px);
+}
+
+.option.selected {
+  background: #4dabf7;
+  border-color: #339af0;
+  color: white;
+}
+
+.button {
+  width: 100%;
+  padding: 15px 30px;
+  background: #339af0;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: #228be6;
+  transform: scale(1.02);
+}
+
+.button:disabled {
+  background: #adb5bd;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.result {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.hide {
+  display: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .question {
+    font-size: 1.1rem;
+  }
+
+  .option {
+    padding: 12px 15px;
+  }
+
+  .button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .question {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .options {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .option {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
